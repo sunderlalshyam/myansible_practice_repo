@@ -14,9 +14,6 @@
         state: present
         update_cache: yes
 
-    - name: Uninstall git
-      apt:
-        name: git
-        state: absent
+
 
 
