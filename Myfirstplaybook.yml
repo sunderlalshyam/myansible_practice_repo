@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install git
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Uninstall git
+      apt:
+        name: git
+        state: absent
+
+
