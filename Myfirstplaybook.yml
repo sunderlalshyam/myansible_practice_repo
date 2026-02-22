@@ -8,11 +8,17 @@
         state: present
         update_cache: yes
 
+
     - name: Install apache2
       apt:
         name: apache2
         state: present
         update_cache: yes
+
+    - name: Restart apache2 server
+      service:
+        name: apache2
+        state: restarted
 
 
 
